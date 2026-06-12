@@ -1,11 +1,13 @@
 import roles.*
 
 class Criatura {
+    var poderMagico
+    const astucia
     var rolEnParque
 
-    method poderMagico() 
-    method astucia()
-    method rolEnParque()
+    method poderMagico() = poderMagico
+    method astucia() = astucia
+    method rolEnParque() = rolEnParque
     method poderOfensivo() = self.poderMagico() * 10 + rolEnParque.poderExtra()
     method esFormidable() = self.esAstuta() or self.esExtraordinaria(self)
     method esAstuta()
@@ -34,6 +36,14 @@ class Criatura {
         else {
             self.error("No pudo completarse el ritual")
         }
+    }
+
+    method aumentarPoderMagicoEnCantidad(cantidad) {
+        poderMagico += cantidad
+    }
+
+    method disminuirPoderMagicoEnCantidad(cantidad) {
+        poderMagico -= cantidad
     }
 }
 
