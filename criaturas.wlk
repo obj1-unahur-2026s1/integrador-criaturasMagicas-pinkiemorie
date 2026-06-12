@@ -16,7 +16,7 @@ class Criatura {
     method ritualDeCambioDeRol() {
         if (rolEnParque == Guardian) {
             rolEnParque = new Domador()
-            // rolEnParque.agregarMascota(mascota = new Mascota())
+            rolEnParque.agregarMascota(new Mascota(tieneCuernos = false, edad = 1))
         }
 
         else if (rolEnParque == Hechicero) {
